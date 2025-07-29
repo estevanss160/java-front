@@ -12,7 +12,7 @@ body {
 
 .timeline-carousel {
   margin: 0;
-  background-color: #323232;
+  background-color: #af7803;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   padding: 16px 6.9444% 90px 6.9444%;
@@ -27,7 +27,6 @@ body {
   top: 0;
   height: 100%;
   width: 6.9444%;
-  background-color: #323232;
   z-index: 3;
   width: 6.9444%;
 }
@@ -55,6 +54,8 @@ body {
 }
 .timeline-carousel__image {
   padding-right: 30px;
+  height: 300px;
+  width: 500px;
 }
 .timeline-carousel__item {
   cursor: grab;
@@ -118,7 +119,7 @@ body {
   font-weight: 600;
 }
 .timeline-carousel__item-inner p {
-  font-size: 12px;
+  font-size: 115%;
   line-height: 18px;
   color: white;
   width: 60%;
@@ -290,42 +291,73 @@ body {
   content: "" "";
 }
 
-.text-reponse {
-  margin-top: 1rem;
-  margin-bottom: 50px;
-  text-align: center;
-  max-height: 30px;
-  font-size: 16px;
-  color: #444444;
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
+.vazio{
+  margin-top: auto;
+  display:flex;
+  color: #ffffff;
+  font-size: 25px;
 }
 
-.section-header {
-  background-color: #fff;
-  border-radius: 12px;
-  height: 18rem;
-  width: 100%;
+.text-reponse {
   margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  min-height: 10%;
+  max-height: 50%;
+  font-size: 50px;
+  
+  }
+
+.main-banner {
+
+  border-radius: 12px;
+  height: auto;
+  width: 80%;
+  margin-top: 50px;
+  margin: auto;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .avatar-box {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  font-size: 35px;
+  
 }
 
 .big-picture {
-  position: absolute;
-  top: -50px;
-  border: 6px solid white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
+  position: relative;
+  margin-top: 10px;
+  height: 300px;
+  width: 500px;
   background-image: url("https://via.placeholder.com/550x320/171717/cccccc?text=550x320");
   background-size: cover;
-  background-position: top;
+}
+
+.input-group{
+  position: relative;
+  padding: 20px;
+  margin:auto;
+  width:70%;  
+}
+
+.btn-pergunta{
+  background-color: #fff;
+  border: #fff;
+  border-radius: 20px;
+}
+
+#text-request{
+  background-color: #D1D1D1;
+    border-radius: 20px 0px 0px 20px;
 }

@@ -111,29 +111,28 @@
 
 
   <!-- main banner -->
-  <section class="container d-flex flex-column justify-content-center align-items-center d-flex section-header">
+  <div class="main-banner">
 
-
+    <div id="avatar" data-id="1" class="big-picture w-80 wiggle"></div>
     <div class="avatar-box">
-      <div id="avatar" data-id="1" class="big-picture w-80 wiggle"></div>
-
-
-      <p class="text-response"></p>
-
-
-      <div class="input-group mb-3 mt-3" style="position: absolute; bottom:0; width: 40rem;">
-        <input id="text-request" style="background-color: #D1D1D1;" type="text" class="form-control"
-          placeholder="Pergunte-me algo" aria-label="Pergunte-me Algo" aria-describedby="btn-get-api">
-        <button class="btn btn-outline-secondary" type="button" id="btn-get-api"
-        onclick="fetchAskChampion()">
-          
-          Perguntar
-        </button>
-      </div>
-
+      
+      <div class="vazio"><p class="text-response"></p></div>
     </div>
+ 
+  </div>
+     <div class="input-group">
+      <input id="text-request" type="text" class="form-control"
+      placeholder="Pergunte-me algo" aria-label="Pergunte-me Algo" aria-describedby="btn-get-api">
+      <button class="btn-pergunta" type="button" id="btn-get-api"
+      onclick="fetchAskChampion()">
+      Perguntar
+    </button>
+      <button class="btn-pergunta" type="button" id="btn-get-api"
+      onclick="lerTexto()">
+      ler
+    </button>
+  </div>
 
-  </section>
   <!-- main banner -->
 
 

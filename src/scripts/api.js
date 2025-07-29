@@ -1,6 +1,7 @@
 const routes = {
-  champions: "https://java10-920891295577.southamerica-east1.run.app/champions",
-  ask: "https://java10-920891295577.southamerica-east1.run.app/champions/{id}/ask"
+  champions: "https://java-projeto-920891295577.southamerica-east1.run.app/champions",
+  ask: "https://java-projeto-920891295577.southamerica-east1.run.app/champions/{id}/ask",
+  ler: "https://java-projeto-920891295577.southamerica-east1.run.app/api/tts/synthesize"
 };
 const apiService = {
   async getChampions(){
@@ -147,6 +148,36 @@ async function loadCarrousel() {
       },
     ],
   });
+}
+
+// No seu arquivo JavaScript, após o texto ser gerado e o botão de leitura clicado
+async function lerTexto() {
+    const textoParaLer = state.views.response.textContent;
+
+    try {
+        const response = await fetch(routes.ler, { // Endpoint no seu Spring Boot
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain', // Enviamos o texto puro, não um JSON
+            },
+            body: textoParaLer, // Envie o texto diretamente no corpo da requisição
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Erro do servidor: ${response.status} - ${errorText}`);
+        }
+
+        const base64Audio = await response.text(); // Recebe o Base64 do áudio
+        
+        // Crie um elemento de áudio e reproduza
+        const audio = new Audio(`data:audio/mp3;base64,${base64Audio}`);
+        audio.play();
+
+    } catch (error) {
+        console.error('Erro ao ler texto com Google Cloud TTS:', error);
+        alert('Não foi possível ler o texto. Tente novamente mais tarde.');
+    }
 }
 
 main();
