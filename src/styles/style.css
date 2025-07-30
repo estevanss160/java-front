@@ -53,9 +53,13 @@ body {
   font-weight: 300;
 }
 .timeline-carousel__image {
-  padding-right: 30px;
-  height: 300px;
+  position: relative;
+  margin-top: 10px;
+  height: 325px;
   width: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .timeline-carousel__item {
   cursor: grab;
